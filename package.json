@@ -4,22 +4,31 @@
   "description": "",
   "license": "",
   "scripts": {
-    "build": "remix build",
-    "dev": "remix dev",
+    "build": "run-s \"build:*\"",
+    "build:css": "npm run generate:css -- --env production",
+    "build:remix": "remix build",
+    "dev": "run-p \"dev:*\"",
+    "dev:css": "npm run generate:css -- --watch",
+    "dev:remix": "remix dev",
+    "generate:css": "postcss styles --base styles --dir app/styles",
     "postinstall": "remix setup node",
     "start": "remix-serve build"
   },
   "dependencies": {
     "@remix-run/react": "^1.0.6",
+    "@remix-run/serve": "^1.0.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "remix": "^1.0.6",
-    "@remix-run/serve": "^1.0.6"
+    "remix": "^1.0.6"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.0.6",
     "@types/react": "^17.0.24",
     "@types/react-dom": "^17.0.9",
+    "autoprefixer": "^10.4.12",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.16",
+    "postcss-cli": "^10.0.0",
     "typescript": "^4.1.2"
   },
   "engines": {
