@@ -2,7 +2,7 @@ import { Link } from "remix";
 
 export default function AboutIndex() {
   return (
-    <div>
+    <div className="flow">
       <p>
         Whoa, this is a nested route! We render the <code>/about</code> layout
         route component, and its <code>Outlet</code> renders our route

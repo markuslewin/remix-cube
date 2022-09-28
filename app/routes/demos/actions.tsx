@@ -48,7 +48,7 @@ export default function ActionsDemo() {
 
   return (
     <div className="remix__page">
-      <main>
+      <main className="flow">
         <h2>Actions!</h2>
         <p>
           This form submission will send a post request that we handle in our

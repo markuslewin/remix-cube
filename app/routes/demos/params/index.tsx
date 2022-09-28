@@ -3,7 +3,7 @@ import type { LoaderFunction } from "remix";
 
 export default function Boundaries() {
   return (
-    <>
+    <div className="flow">
       <h2>Params</h2>
       <p>
         When you name a route segment with $ like{" "}
@@ -35,6 +35,6 @@ export default function Boundaries() {
         and send your app into the catch boundary. Just like error boundaries,
         catch boundaries bubble, too.
       </p>
-    </>
+    </div>
   );
 }

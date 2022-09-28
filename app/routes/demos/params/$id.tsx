@@ -76,14 +76,14 @@ export function CatchBoundary() {
   }
 
   return (
-    <>
+    <div className="flow">
       <h2>Oops!</h2>
       <p>{message}</p>
       <p>
         (Isn't it cool that the user gets to stay in context and try a different
         link in the parts of the UI that didn't blow up?)
       </p>
-    </>
+    </div>
   );
 }
 
@@ -92,14 +92,14 @@ export function CatchBoundary() {
 export function ErrorBoundary({ error }: { error: Error }) {
   console.error(error);
   return (
-    <>
+    <div className="flow">
       <h2>Error!</h2>
       <p>{error.message}</p>
       <p>
         (Isn't it cool that the user gets to stay in context and try a different
         link in the parts of the UI that didn't blow up?)
       </p>
-    </>
+    </div>
   );
 }
 
