@@ -1,4 +1,5 @@
 const configFromTokens = require("./css-utils/config-from-tokens");
+const customPropertiesFromTheme = require("./css-utils/custom-properties-from-theme");
 
 const colorTokens = require("./design-tokens/colors.json");
 
@@ -15,5 +16,5 @@ module.exports = {
   corePlugins: {
     preflight: false,
   },
-  plugins: [],
+  plugins: [customPropertiesFromTheme({ colors: "color" })],
 };
