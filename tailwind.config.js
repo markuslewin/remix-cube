@@ -6,11 +6,19 @@ const pxToRem = require("./css-utils/px-to-rem");
 const valueMap = require("./css-utils/value-map");
 
 const colorTokens = require("./design-tokens/colors.json");
+const fontTokens = require("./design-tokens/fonts.json");
 const textSizeTokens = require("./design-tokens/text-sizes.json");
 
 const colors = configFromTokens(colorTokens);
 const fontSize = valueMap(configFromTokens(textSizeTokens), (size) => {
   return `${pxToRem(size)}rem`;
+});
+const fontFamily = valueMap(configFromTokens(fontTokens), (fonts) => {
+  // Fontsource appends "Variable" to the name of variable fonts
+  const variableFonts = ["Inter"];
+  return fonts.map((font) =>
+    variableFonts.includes(font) ? `${font}Variable` : font
+  );
 });
 
 /** @type {import('tailwindcss').Config} */
@@ -18,6 +26,7 @@ module.exports = {
   content: ["./app/**/*.{ts,tsx,jsx,js}"],
   theme: {
     colors,
+    fontFamily,
     fontSize,
     extend: {},
   },
