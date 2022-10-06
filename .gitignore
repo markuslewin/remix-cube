@@ -7,3 +7,5 @@ node_modules
 app/styles
 # target path for font-loader
 /public/fonts
+# target path for generation of svg components
+/app/svgs
