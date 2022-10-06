@@ -1,7 +1,0 @@
-:root {
-  --color-foreground: var(--color-white);
-  --color-background: var(--color-black);
-  --color-links: var(--color-blue-400);
-  --color-links-hover: var(--color-blue-300);
-  --color-border: var(--color-dark-gray);
-}

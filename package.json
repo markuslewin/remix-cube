@@ -12,7 +12,7 @@
     "dev:css": "npm run generate:css -- --watch",
     "dev:svgs": "watch \"npm run generate:svgs\" svgs",
     "dev:remix": "remix dev",
-    "generate:css": "postcss styles --base styles --dir app/styles",
+    "generate:css": "postcss styles/global.css --dir app/styles",
     "generate:svgs": "svgr --typescript --out-dir app/svgs svgs",
     "postinstall": "remix setup node",
     "start": "remix-serve build"
