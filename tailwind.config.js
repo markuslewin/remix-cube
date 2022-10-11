@@ -3,6 +3,7 @@ const plugin = require("tailwindcss/plugin");
 const configFromTokens = require("./css-utils/config-from-tokens");
 const customPropertiesFromTheme = require("./css-utils/custom-properties-from-theme");
 const pxToRem = require("./css-utils/px-to-rem");
+// const pxsToRemScale = require("./css-utils/pxs-to-rem-scale");
 const valueMap = require("./css-utils/value-map");
 
 const colorTokens = require("./design-tokens/colors.json");
@@ -28,7 +29,9 @@ module.exports = {
     colors,
     fontFamily,
     fontSize,
-    extend: {},
+    extend: {
+      // spacing: pxsToRemScale(63, 71),
+    },
   },
   // Disables Tailwind's reset etc
   corePlugins: {
