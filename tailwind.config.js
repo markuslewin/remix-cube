@@ -38,6 +38,7 @@ module.exports = {
     preflight: false,
   },
   plugins: [
+    require("tailwindcss-logical"),
     customPropertiesFromTheme({ colors: "color" }),
     // Custom utility classes
     plugin(({ matchUtilities, theme }) => {
