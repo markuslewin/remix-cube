@@ -1,6 +1,18 @@
-# Welcome to Remix!
+# Remix CUBE
+
+`npx create-remix@latest --template markuslewin/remix-cube`
+
+A template for building React websites using the Remix framework and the CUBE methodology.
+
+Heavily influenced by "[Build Excellent Websites](https://buildexcellentwebsit.es/)" ([talk](https://www.youtube.com/watch?v=5uhIiI9Ld5M), [source code](https://glitch.com/edit/#!/build-excellent-websites)) and the [Remix Docs](https://remix.run/docs).
+
+## Resources
 
 - [Remix Docs](https://remix.run/docs)
+- [CUBE CSS](https://cube.fyi/)
+- [Tailwind](https://tailwindcss.com/)
+- [Every Layout](https://every-layout.dev/)
+- [Fontsource](https://fontsource.org/)
 
 ## Development
 
@@ -11,6 +23,21 @@ npm run dev
 ```
 
 This starts your app in development mode, rebuilding assets on file changes.
+
+## Adding assets
+
+### Fonts
+
+Fonts are imported in `styles/global/fonts.css`. The PostCSS build step is responsible for copying the font files into `public` and rebasing the `url` declarations of the bundled output.
+
+Example:
+
+1. `npm i @fontsource/inter`
+2. In `styles/global/fonts.css`, `@import "@fontsource/inter/variable-full.css";`
+
+### SVGs as components
+
+SVG files added to the `svgs` folder will be converted in the build step and stored as React components inside `app/svgs`.
 
 ## Deployment
 
@@ -36,18 +63,3 @@ Make sure to deploy the output of `remix build`
 
 - `build/`
 - `public/build/`
-
-### Using a Template
-
-When you ran `npx create-remix@latest` there were a few choices for hosting. You can run that again to create a new project, then copy over your `app/` folder to the new project that's pre-configured for your target server.
-
-```sh
-cd ..
-# create a new project, and pick a pre-configured host
-npx create-remix@latest
-cd my-new-remix-app
-# remove the new project's app (not the old one!)
-rm -rf app
-# copy your app over
-cp -R ../my-old-remix-app/app app
-```
