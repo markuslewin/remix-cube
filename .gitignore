@@ -9,3 +9,6 @@ app/styles
 /public/fonts
 # target path for generation of svg components
 /app/svgs
+# target path for parcel bundle
+/public/style-assets
+.parcel-cache

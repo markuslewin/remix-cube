@@ -5,14 +5,13 @@
   "license": "",
   "scripts": {
     "build": "run-s \"build:*\"",
-    "build:css": "npm run generate:css -- --env production",
+    "build:css": "parcel build styles/global.css --dist-dir public/style-assets",
     "build:svgs": "npm run generate:svgs",
     "build:remix": "remix build",
     "dev": "run-p \"dev:*\"",
-    "dev:css": "npm run generate:css -- --watch",
+    "dev:css": "parcel watch styles/global.css --dist-dir public/style-assets",
     "dev:svgs": "watch \"npm run generate:svgs\" svgs",
     "dev:remix": "remix dev",
-    "generate:css": "postcss styles/global.css --dir app/styles",
     "generate:svgs": "svgr --typescript --out-dir app/svgs svgs",
     "start": "remix-serve build"
   },
@@ -25,6 +24,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@parcel/resolver-glob": "^2.7.0",
     "@remix-run/dev": "^1.7.2",
     "@remix-run/eslint-config": "^1.7.2",
     "@svgr/cli": "^6.4.0",
@@ -35,6 +35,7 @@
     "eslint": "^8.25.0",
     "eslint-config-prettier": "^8.5.0",
     "npm-run-all": "^4.1.5",
+    "parcel": "^2.7.0",
     "postcss": "^8.4.16",
     "postcss-cli": "^10.0.0",
     "postcss-import": "^15.0.0",
