@@ -1,14 +1,15 @@
+# npm
 node_modules
 
+# remix
 /.cache
 /build
 /public/build
 
-app/styles
-# target path for font-loader
-/public/fonts
-# target path for generation of svg components
+# parcel
+.parcel-cache
+
+# target path for generated svg components
 /app/svgs
 # target path for parcel bundle
 /public/style-assets
-.parcel-cache
