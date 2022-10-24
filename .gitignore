@@ -5,7 +5,7 @@ node_modules
 /public/build
 
 app/styles
-# target path for font-loader
-/public/fonts
+# target path for asset-loader
+/public/styles-assets
 # target path for generation of svg components
 /app/svgs
