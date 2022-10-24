@@ -114,7 +114,7 @@ function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="remix-app">
       <header className="remix-app__header">
-        <div className="center remix-app__header-content">
+        <div className="container remix-app__header-content">
           <Link to="/" title="Remix" className="remix-app__header-home-link">
             <RemixLogo />
           </Link>
@@ -134,10 +134,10 @@ function Layout({ children }: { children: React.ReactNode }) {
         </div>
       </header>
       <div className="remix-app__main">
-        <div className="center remix-app__main-content">{children}</div>
+        <div className="container remix-app__main-content">{children}</div>
       </div>
       <footer className="remix-app__footer">
-        <div className="center remix-app__footer-content">
+        <div className="container remix-app__footer-content">
           <p>&copy; You!</p>
         </div>
       </footer>
