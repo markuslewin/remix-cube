@@ -14,8 +14,7 @@
     "dev:remix": "remix watch",
     "dev:netlify": "cross-env NODE_ENV=development netlify dev",
     "generate:css": "postcss styles/global.css --dir app/styles",
-    "generate:svgs": "svgr --typescript --out-dir app/svgs svgs",
-    "start": "remix-serve build"
+    "generate:svgs": "svgr --typescript --out-dir app/svgs svgs"
   },
   "dependencies": {
     "@fontsource/inter": "^4.5.12",
