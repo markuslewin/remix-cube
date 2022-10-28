@@ -41,25 +41,10 @@ SVG files added to the `svgs` folder will be converted in the build step and sto
 
 ## Deployment
 
-First, build your app for production:
+With Netlify CLI:
 
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
+1. `npm install netlify-cli --global`
+2. `netlify init`
+3. `npm run build`
+4. `netlify deploy`
+5. `netlify deploy --prod`

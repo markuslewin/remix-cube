@@ -1,10 +1,16 @@
+# npm
 node_modules
 
+# remix
 /.cache
-/build
+/netlify/functions/server/build
 /public/build
 
-app/styles
+# netlify
+.netlify
+
+# target path for styles bundles
+/app/styles
 # target path for asset-loader
 /public/styles-assets
 # target path for generation of svg components
